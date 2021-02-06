@@ -132,6 +132,9 @@ sub new {
 	my $key = "";
 	for (1..16) { $key .= int(rand(9)) }
 
+	my $origin = (uc $scheme eq 'WSS' ? 'https' : 'http')
+		. "://$host";
+
 	$self->{session} = POE::Session->create(
 			package_states => [
 				$self => {
@@ -167,7 +170,7 @@ sub new {
 					port            => $port,
 				},
 				req             => {
-					'origin'                =>      'http://'.$host,
+					'origin'                =>      $origin,
 					'sec-websocket-key'     =>      encode_base64($key),
 				},
 				_state          => {
