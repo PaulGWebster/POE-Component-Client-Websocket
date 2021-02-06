@@ -467,7 +467,7 @@ sub _socket_birth {
 		$heap->{httpresp} = 1;
 
 		# Send the request to the server
-        $heap->{wheel}->put($request->as_string());
+        $heap->{wheel}->put($request->as_string("\r\n"));
 
         # Incase we want to investigate what we sent later.
         $heap->{_state}->{req} = $request;
