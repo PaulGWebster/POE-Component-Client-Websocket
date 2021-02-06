@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '0.27'; 
+$VERSION = '0.28'; 
 
 use Carp qw(carp croak);
 use Errno qw(ETIMEDOUT ECONNRESET);
@@ -132,6 +132,9 @@ sub new {
 	my $key = "";
 	for (1..16) { $key .= int(rand(9)) }
 
+	my $origin = (uc $scheme eq 'WSS' ? 'https' : 'http')
+		. "://$host";
+
 	$self->{session} = POE::Session->create(
 			package_states => [
 				$self => {
@@ -167,7 +170,7 @@ sub new {
 					port            => $port,
 				},
 				req             => {
-					'origin'                =>      'http://'.$host,
+					'origin'                =>      $origin,
 					'sec-websocket-key'     =>      encode_base64($key),
 				},
 				_state          => {
@@ -430,7 +433,10 @@ sub _socket_birth {
         my ($kernel, $socket, $sockid, $heap) = @_[KERNEL, ARG0, ARG3, HEAP];
 
         if ( uc($heap->{uri}->{scheme}) eq 'WSS' ) {
-                $heap->{_state}->{sslfilter} = POE::Filter::SSL->new(client=>1);
+                $heap->{_state}->{sslfilter} = POE::Filter::SSL->new(
+                    client => 1,
+                    sni => $heap->{uri}->{host},
+                );
 
                 $heap->{filters}->{output} = POE::Filter::Stackable->new(Filters => [ $heap->{_state}->{sslfilter} ]);
                 $heap->{filters}->{input} = POE::Filter::Stackable->new(Filters => [ $heap->{_state}->{sslfilter} ]);
@@ -451,7 +457,7 @@ sub _socket_birth {
 			ErrorEvent      => 'socket_death',
         );
 
-        my $request = HTTP::Request->new(GET => '/');
+        my $request = HTTP::Request->new(GET => $heap->{uri}->{path});
         $request->protocol('HTTP/1.1');
         $request->header(
 			Upgrade                         => 'WebSocket',
@@ -467,7 +473,7 @@ sub _socket_birth {
 		$heap->{httpresp} = 1;
 
 		# Send the request to the server
-        $heap->{wheel}->put($request->as_string());
+        $heap->{wheel}->put($request->as_string("\r\n"));
 
         # Incase we want to investigate what we sent later.
         $heap->{_state}->{req} = $request;
