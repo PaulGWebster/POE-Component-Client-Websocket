@@ -7,8 +7,6 @@ makeNotes
 MANIFEST			This list of files
 MANIFEST.bak
 MANIFEST.SKIP
-MYMETA.json
-MYMETA.yml
 README
 t/00-load.t
 t/manifest.t
