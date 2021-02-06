@@ -457,7 +457,7 @@ sub _socket_birth {
 			ErrorEvent      => 'socket_death',
         );
 
-        my $request = HTTP::Request->new(GET => '/');
+        my $request = HTTP::Request->new(GET => $heap->{uri}->{path});
         $request->protocol('HTTP/1.1');
         $request->header(
 			Upgrade                         => 'WebSocket',
