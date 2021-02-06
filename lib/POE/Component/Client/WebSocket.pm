@@ -433,7 +433,10 @@ sub _socket_birth {
         my ($kernel, $socket, $sockid, $heap) = @_[KERNEL, ARG0, ARG3, HEAP];
 
         if ( uc($heap->{uri}->{scheme}) eq 'WSS' ) {
-                $heap->{_state}->{sslfilter} = POE::Filter::SSL->new(client=>1);
+                $heap->{_state}->{sslfilter} = POE::Filter::SSL->new(
+                    client => 1,
+                    sni => $heap->{uri}->{host},
+                );
 
                 $heap->{filters}->{output} = POE::Filter::Stackable->new(Filters => [ $heap->{_state}->{sslfilter} ]);
                 $heap->{filters}->{input} = POE::Filter::Stackable->new(Filters => [ $heap->{_state}->{sslfilter} ]);
