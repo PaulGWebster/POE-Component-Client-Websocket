@@ -537,14 +537,13 @@ sub _socket_input {
 
 Paul G Webster, C<< <daemon at cpan.org> >>
 
+=head1 Contributors
+
+Tom Ryder C << anonymous@while.verifying >>
+
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-poe-component-client-websocket at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=POE-Component-Client-WebSocket>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
-
+Please report any bugs or feature requests to L<https://github.com/PaulGWebster/POE-Component-Client-Websocket>
 
 =head1 SUPPORT
 
@@ -557,21 +556,17 @@ You can also look for information at:
 
 =over 4
 
-=item * RT: CPAN's request tracker (report bugs here)
+=item * GitHub (please report bugs here)
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=POE-Component-Client-WebSocket>
+L<https://github.com/PaulGWebster/POE-Component-Client-Websocket/issues>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
 L<http://annocpan.org/dist/POE-Component-Client-WebSocket>
 
-=item * CPAN Ratings
+=item * Search MetaCPAN
 
-L<http://cpanratings.perl.org/d/POE-Component-Client-WebSocket>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/POE-Component-Client-WebSocket/>
+L<http://search.metacpan.org/dist/POE-Component-Client-WebSocket/>
 
 =back
 
@@ -581,7 +576,7 @@ L<http://search.cpan.org/dist/POE-Component-Client-WebSocket/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2016 Paul G Webster.
+Copyright 2021 Paul G Webster.
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of the the Artistic License (2.0). You may obtain a
