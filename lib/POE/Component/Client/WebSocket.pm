@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '0.28'; 
+$VERSION = '0.29'; 
 
 use Carp qw(carp croak);
 use Errno qw(ETIMEDOUT ECONNRESET);
@@ -49,7 +49,7 @@ POE::Component::Client::WebSocket - A POE compatible websocket client
 
 =head1 VERSION
 
-Version 0.28
+Version 0.29
 
 =head1 WARNING: Work in progress! Only uploaded early for testing purposes!
 
