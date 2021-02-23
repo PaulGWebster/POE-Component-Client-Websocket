@@ -1,0 +1,8 @@
+Changes
+cpanfile
+dist.ini
+Makefile
+Makefile.PL
+MYMETA.json
+MYMETA.yml
+lib/POE/Component/Client/WebSocket.pm
