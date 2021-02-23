@@ -1,5 +1,8 @@
 Revision history for POE-Component-Client-WebSocket
 
+0.29    13/02/2021 12:00 UTC
+	Moved the module over to a DZIL base
+
 0.28	01/05/2021 13:07 UTC
 	Include hostname in SNI
 	Correct ignored path in URL
