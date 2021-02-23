@@ -3,6 +3,5 @@ cpanfile
 dist.ini
 Makefile
 Makefile.PL
-MYMETA.json
-MYMETA.yml
+MANIFEST
 lib/POE/Component/Client/WebSocket.pm
