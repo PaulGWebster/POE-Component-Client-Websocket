@@ -581,6 +581,11 @@ L<http://search.metacpan.org/dist/POE-Component-Client-WebSocket/>
 
 =head1 ACKNOWLEDGEMENTS
 
+=over 4
+
+=item * Tom Ryder - Multiple fixes for version including SNI 0.29 L<https://metacpan.org/author/TEJR>
+
+=back
 
 =head1 LICENSE AND COPYRIGHT
 
