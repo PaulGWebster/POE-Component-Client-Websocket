@@ -1,7 +1,0 @@
-Changes
-cpanfile
-dist.ini
-Makefile
-Makefile.PL
-MANIFEST
-lib/POE/Component/Client/WebSocket.pm
