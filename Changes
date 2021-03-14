@@ -1,6 +1,8 @@
 Revision history for POE-Component-Client-WebSocket
 
 {{$NEXT}}
+
+0.30      2021-03-14 04:14:56 GMT
     Updated acknoledgements
     Fixed Changes template header for next
 
