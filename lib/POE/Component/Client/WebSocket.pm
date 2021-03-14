@@ -1,11 +1,11 @@
 package POE::Component::Client::WebSocket;
 
-use v5.26.0;;
+use v5.026;
 use strict;
 use warnings;
 
-use vars qw($VERSION);
-$VERSION = '0.29'; 
+# Correct version definition
+our $VERSION = '0.30'; 
 
 use Carp qw(carp croak);
 use Errno qw(ETIMEDOUT ECONNRESET);
