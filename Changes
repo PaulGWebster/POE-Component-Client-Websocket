@@ -1,6 +1,8 @@
 Revision history for POE-Component-Client-WebSocket
 
 {{$NEXT}}
+
+0.31      2021-03-14 04:32:09 GMT
         Typo and spacing fixes for various files
 0.30
         Updated acknoledgements
