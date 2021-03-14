@@ -1,6 +1,7 @@
 Revision history for POE-Component-Client-WebSocket
 
 {{$NEXT}}
+        Set max_payload_size to 0 (unlimited) for Protocol::WebSocket::Frame, as a temporary fix - this needs handling better
 
 0.33      2021-03-14 04:45:50 GMT
 
