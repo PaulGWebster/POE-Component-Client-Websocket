@@ -170,7 +170,7 @@ sub new {
             },
             _state          => {
                 run                     =>  1,
-                frame                   =>  Protocol::WebSocket::Frame->new,
+                frame                   =>  Protocol::WebSocket::Frame->new(max_payload_size => 0),
             },
     
         }
