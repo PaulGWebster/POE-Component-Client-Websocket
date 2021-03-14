@@ -545,10 +545,6 @@ sub _socket_input {
 
 Paul G Webster, C<< <daemon at cpan.org> >>
 
-=head1 Contributors
-
-Tom Ryder C << anonymous@while.verifying >>
-
 =head1 BUGS
 
 Please report any bugs or feature requests to L<https://github.com/PaulGWebster/POE-Component-Client-Websocket>
