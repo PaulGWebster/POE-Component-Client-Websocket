@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 # Correct version definition
-our $VERSION = '0.30'; 
+our $VERSION = '0.31'; 
 
 use Carp qw(carp croak);
 use Errno qw(ETIMEDOUT ECONNRESET);
