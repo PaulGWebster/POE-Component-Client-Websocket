@@ -1,11 +1,11 @@
 package POE::Component::Client::WebSocket;
 
-use v5.26.0;;
+use v5.026;
 use strict;
 use warnings;
 
-use vars qw($VERSION);
-$VERSION = '0.29'; 
+# Correct version definition
+our $VERSION = '0.30'; 
 
 use Carp qw(carp croak);
 use Errno qw(ETIMEDOUT ECONNRESET);
@@ -581,6 +581,11 @@ L<http://search.metacpan.org/dist/POE-Component-Client-WebSocket/>
 
 =head1 ACKNOWLEDGEMENTS
 
+=over 4
+
+=item * Tom Ryder - Multiple fixes for version including SNI 0.29 L<https://metacpan.org/author/TEJR>
+
+=back
 
 =head1 LICENSE AND COPYRIGHT
 

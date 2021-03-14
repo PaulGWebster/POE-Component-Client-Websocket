@@ -1,5 +1,9 @@
 Revision history for POE-Component-Client-WebSocket
 
+{{$NEXT}}
+    Updated acknoledgements
+    Fixed Changes template header for next
+
 0.29    13/02/2021 12:00 UTC
 	Moved the module over to a DZIL base
 
