@@ -49,7 +49,7 @@ POE::Component::Client::WebSocket - A POE compatible websocket client
 
 =head1 VERSION
 
-Version 0.29
+Version 0.31
 
 =head1 WARNING: Work in progress! Only uploaded early for testing purposes!
 
