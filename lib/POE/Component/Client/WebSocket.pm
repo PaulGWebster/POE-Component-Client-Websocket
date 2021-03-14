@@ -47,10 +47,6 @@ my $validOpts = {
 
 POE::Component::Client::WebSocket - A POE compatible websocket client
 
-=head1 VERSION
-
-Version 0.31
-
 =head1 WARNING: Work in progress! Only uploaded early for testing purposes!
 
 This module appears to work perfectly, however its not really been tested that much and I will be amazed if there are not bugs.
